@@ -1,0 +1,6 @@
+.env*
+*.log
+*.sqlite*
+*.zip
+__pycache__/
+.DS_Store
