@@ -1,0 +1,11 @@
+{
+  "method": "exact lexical pattern only; not semantic coding",
+  "patterns": {
+    "heart_rate": "heart rate|heartbeat|bpm",
+    "bodily_state": "body|physical|resting|seated",
+    "numeric_72": "(?<!\\d)72(?!\\d)",
+    "calmness": "calm|relax",
+    "stress": "stress",
+    "health": "health"
+  }
+}

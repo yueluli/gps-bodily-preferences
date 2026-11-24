@@ -1,0 +1,7 @@
+# Heart Rate Context Pilot
+
+This isolated pilot reuses the archived 1,000-person `gpt-6-luna` baseline and draws 100 fixed participants using seed 42. Three new arms use the original 20 adaptive GPS questions with a two-stage JSON response per question. Stage 1 records the numerical choice and one-sentence reason. Stage 2 asks about contextual influence in the same conversation, without changing the choice. Prompt passages are frozen in `config/experiment_config.json`.
+
+From the workspace root, run `python experiments/heart_rate_pilot/scripts/run.py check` for the sample and source checks, `python experiments/heart_rate_pilot/scripts/run.py run --workers 10` to run or resume, and `python experiments/heart_rate_pilot/scripts/analyze.py` after completion. The runner uses the project Luna gateway configuration and stores each valid/invalid stage in SQLite; existing valid stages are skipped on resume. Full run targets 12,000 successful stage calls plus retries. The project source includes a local key; do not publish it. Set `HKUST_API_KEY` in the environment for shared use.
+
+Participant-level data and raw model output in `data/` are local only. The GitHub repository is public; publish reviewed code, aggregate analysis and figures only. Historical baseline and new conditions are different call batches. Generated reasons and self-reports are exploratory, not evidence of the model's internal mechanism.

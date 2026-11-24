@@ -1,0 +1,9 @@
+condition,context_influence,n
+baseline_with_reason,no,1883
+baseline_with_reason,uncertain,4
+baseline_with_reason,yes,113
+bodily_context,no,1965
+bodily_context,yes,35
+numerical_placebo,no,1921
+numerical_placebo,uncertain,1
+numerical_placebo,yes,78

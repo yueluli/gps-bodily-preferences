@@ -1,0 +1,7 @@
+arm,stage,status,n
+baseline_with_reason,1,valid,2000
+baseline_with_reason,2,valid,2000
+bodily_context,1,valid,2000
+bodily_context,2,valid,2000
+numerical_placebo,1,valid,2000
+numerical_placebo,2,valid,2000

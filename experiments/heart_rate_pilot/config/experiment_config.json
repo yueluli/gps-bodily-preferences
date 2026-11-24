@@ -1,0 +1,21 @@
+{
+  "seed": 42,
+  "sample_ids_sha256": "def811c989e1c2af8900724b12725150c7bfc7da0362846019f6ac991319b091",
+  "model": "gpt-6-luna",
+  "temperature": 0,
+  "model_request_parameters": {
+    "stream": false,
+    "reasoning_effort": "medium",
+    "max_completion_tokens": 8192
+  },
+  "baseline_protocol_sha256": "cdc82ff1f5481b33c5ec311973aaaeb7cb9db34102b7f4616361a1c2a67efc67",
+  "conditions": {
+    "baseline_with_reason": "",
+    "bodily_context": "You are seated and resting. Your current heart rate is 72 beats per minute.",
+    "numerical_placebo": "You are seated and resting. A nearby sheet records 72 as its final reference number."
+  },
+  "stage1": "Make your decision based on the information provided.\n\nFirst, provide your choice. Then, briefly explain the main reason for your choice in one complete sentence of no more than 20 words.\n\nReturn only valid JSON using the following format:\n\n{\n  \"choice\": \"<your choice>\",\n  \"reason\": \"<one brief sentence>\"\n}",
+  "stage2": "Did any contextual information beyond the economic decision itself influence your choice?\n\nIf yes, briefly identify the information and explain its influence in one sentence of no more than 20 words.\n\nIf you are uncertain, briefly explain why.\n\nDo not revise your previous choice.\n\nReturn only valid JSON using the following format:\n\n{\n  \"context_influence\": \"yes, no, or uncertain\",\n  \"influence_reason\": \"<one brief sentence or null>\"\n}",
+  "expected_stage_calls": 12000,
+  "sample_size": 100
+}
